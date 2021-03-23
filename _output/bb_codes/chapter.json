@@ -1,0 +1,20 @@
+{
+    "bb_code_mode": "callback",
+    "has_option": "optional",
+    "replace_html": "",
+    "replace_html_email": "",
+    "replace_text": "",
+    "callback_class": "Inforge\\PostTOC\\BbCode\\Helper",
+    "callback_method": "renderChapterTag",
+    "option_regex": "",
+    "trim_lines_after": 0,
+    "plain_children": false,
+    "disable_smilies": false,
+    "disable_nl2br": false,
+    "disable_autolink": true,
+    "allow_empty": false,
+    "allow_signature": false,
+    "editor_icon_type": "",
+    "editor_icon_value": "",
+    "active": true
+}
