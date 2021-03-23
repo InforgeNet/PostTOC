@@ -1,0 +1,22 @@
+{
+	"legacy_addon_id": "",
+	"title": "[Inforge] PostTOC",
+	"description": "Add BBCode to support the creation of a table of contents in posts.",
+	"version_id": 1000070,
+	"version_string": "1.0.0",
+	"dev": "Inforge",
+	"dev_url": "https://www.inforge.net",
+	"faq_url": "https://github.com/InforgeNet/PostTOC/wiki/Frequently-Asked-Questions",
+	"support_url": "https://github.com/InforgeNet/PostTOC/issues",
+	"extra_urls": {
+		"Forum": "https://www.inforge.net/forum",
+		"GitHub": "https://github.com/InforgeNet/PostTOC"
+	},
+	"require": {
+		"XF": [
+			2020010,
+			"XenForo 2.2.0+"
+		]
+	},
+	"icon": "fas fa-list"
+}
