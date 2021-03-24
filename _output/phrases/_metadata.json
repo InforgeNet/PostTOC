@@ -5,11 +5,71 @@
         "version_string": "1.0.0",
         "hash": "bf5b784755d525df644dc5590832c39a"
     },
+    "custom_bb_code_desc.paragraph.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "b95fcc6305cacfd5e7c07dda933c7bc7"
+    },
+    "custom_bb_code_desc.section.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "121848e324f28e21afa4b4122eb15ee5"
+    },
+    "custom_bb_code_desc.subsection.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "374d63167e76c00f7baa74c793e3d1b2"
+    },
+    "custom_bb_code_desc.subsubsection.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "3f7fcd34b0ecf98fb08db8249ad8f9b1"
+    },
+    "custom_bb_code_desc.toc.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "5d733f17b09cd7446d0943cf1ae33fb0"
+    },
     "custom_bb_code_example.chapter.txt": {
         "global_cache": false,
         "version_id": 1000070,
         "version_string": "1.0.0",
+        "hash": "0c6c00dd85bc759fada847f471bef504"
+    },
+    "custom_bb_code_example.paragraph.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
         "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_example.section.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_example.subsection.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_example.subsubsection.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_example.toc.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "4833c9c666ab08eab843f927b5354097"
     },
     "custom_bb_code_output.chapter.txt": {
         "global_cache": false,
@@ -17,10 +77,76 @@
         "version_string": "1.0.0",
         "hash": "d41d8cd98f00b204e9800998ecf8427e"
     },
+    "custom_bb_code_output.paragraph.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_output.section.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_output.subsection.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_output.subsubsection.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_output.toc.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "674d9b64be6bdb41b567eb7b0fafebae"
+    },
     "custom_bb_code_title.chapter.txt": {
         "global_cache": false,
         "version_id": 1000070,
         "version_string": "1.0.0",
         "hash": "d22db41a9d78a3f7419c6b6c2974276b"
+    },
+    "custom_bb_code_title.paragraph.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "feaf0a320c3d678ad30dd179b7d21584"
+    },
+    "custom_bb_code_title.section.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d2c24d59e0baff4d0155fbdf62590867"
+    },
+    "custom_bb_code_title.subsection.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "9b5d6a25da6a582a90fc804172bd498b"
+    },
+    "custom_bb_code_title.subsubsection.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "56336045eda5aad9e2f52e1be32a1ec4"
+    },
+    "custom_bb_code_title.toc.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "f61d6c3e3733db355168b7e1aee6780b"
+    },
+    "if_toc_table_of_contents.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "f61d6c3e3733db355168b7e1aee6780b"
     }
 }

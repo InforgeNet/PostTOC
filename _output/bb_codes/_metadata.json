@@ -1,5 +1,20 @@
 {
     "chapter.json": {
-        "hash": "7352f649ef5a0ac40764fa4304eeac72"
+        "hash": "5c2ec57c2423499514d9c96296c0d3a0"
+    },
+    "paragraph.json": {
+        "hash": "a4437679487267d2dd9da8a67622eef4"
+    },
+    "section.json": {
+        "hash": "806032dc7b6d33fe9f69aaecb9bcd437"
+    },
+    "subsection.json": {
+        "hash": "c655333b22283384eab3f650d9157641"
+    },
+    "subsubsection.json": {
+        "hash": "3055cded7ae3c55aee7c4e22b4e78981"
+    },
+    "toc.json": {
+        "hash": "5b1517c235663912f30644bb8b89f0f2"
     }
 }

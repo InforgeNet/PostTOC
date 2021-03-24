@@ -5,7 +5,7 @@
     "replace_html_email": "",
     "replace_text": "",
     "callback_class": "Inforge\\PostTOC\\BbCode\\TagRenderer",
-    "callback_method": "renderChapterTag",
+    "callback_method": "renderSectionTag",
     "option_regex": "",
     "trim_lines_after": 0,
     "plain_children": true,
