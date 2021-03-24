@@ -10,6 +10,10 @@ class TagRenderer
 	private static int $subsubsecNum = 0;
 	private static int $parNum = 0;
 
+	private static ?string $context = null;
+	private static ?string $subContext = null;
+	private static ?int $entityId = null;
+
 	private static function getContent($tagChildren, $removeNewLines = true)
 	{
 		if (is_string($tagChildren))
@@ -104,8 +108,10 @@ class TagRenderer
 
 	}
 
-	private static function renderTag($depth, $tagChildren, $tagOption, $entity)
+	private static function renderTag($depth, $tagChildren, $tagOption,
+		$entity, \XF\BbCode\Renderer\AbstractRenderer $renderer)
 	{
+		self::resetCountersIfNeeded($entity, $renderer);
 		$content = self::getContent($tagChildren);
 		$depth = max($depth, 0);
 		$depth = min($depth, 4);
@@ -121,10 +127,10 @@ class TagRenderer
 		$num = '';
 		if (!empty($options['enumerate']))
 			$num .= self::getNumByDepth($depth, $options['overrideNum'] ?? -1);
-		$uniqueId = self::getEntityId($entity) . '-' . str_replace('.', '-', $num);
+		$uniqueId = self::$entityId . '-' . str_replace('.', '-', $num);
 		$anchorId = self::getAnchorId($uniqueId, $tagChildren);
 		if (strlen($num) > 0)
-			$num .= ' | ';
+			$num .= '&nbsp;&nbsp;&nbsp;&nbsp;';
 		return "<$tag class=\"$htmlClass\" id=\"$anchorId\">$num$content</$tag>";
 	}
 
@@ -161,14 +167,14 @@ class TagRenderer
 		array $options, \XF\BbCode\Renderer\AbstractRenderer $renderer)
 	{
 		return self::renderTag(0, $tagChildren, $tagOption,
-			$options['entity']);
+			$options['entity'], $renderer);
 	}
 
 	public static function renderSectionTag($tagChildren, $tagOption, $tag,
 		array $options, \XF\BbCode\Renderer\AbstractRenderer $renderer)
 	{
 		return self::renderTag(1, $tagChildren, $tagOption,
-			$options['entity']);
+			$options['entity'], $renderer);
 	}
 
 	public static function renderSubsectionTag($tagChildren, $tagOption,
@@ -176,7 +182,7 @@ class TagRenderer
 		\XF\BbCode\Renderer\AbstractRenderer $renderer)
 	{
 		return self::renderTag(2, $tagChildren, $tagOption,
-			$options['entity']);
+			$options['entity'], $renderer);
 	}
 
 	public static function renderSubsubsectionTag($tagChildren, $tagOption,
@@ -184,31 +190,21 @@ class TagRenderer
 		\XF\BbCode\Renderer\AbstractRenderer $renderer)
 	{
 		return self::renderTag(3, $tagChildren, $tagOption,
-			$options['entity']);
+			$options['entity'], $renderer);
 	}
 
 	public static function renderParagraphTag($tagChildren, $tagOption, $tag,
 		array $options, \XF\BbCode\Renderer\AbstractRenderer $renderer)
 	{
 		return self::renderTag(4, $tagChildren, $tagOption,
-			$options['entity']);
+			$options['entity'], $renderer);
 	}
 
 	public static function renderTocTag($tagChildren, $tagOption, $tag,
 		array $options, \XF\BbCode\Renderer\AbstractRenderer $renderer)
 	{
-		//$renderer->getTemplater()->includeJs([
-		//		'src' => 'inforge/posttoc/toc-renderer.js',
-		//		'addon' => 'Inforge/PostTOC',
-		//		'min' => true,
-		//	]);
-		self::resetCounters();
-		$hideTitle = !empty($tagOption) &&
-			(strtolower(trim($tagOption)) == 'notitle');
 		return $renderer->getTemplater()->renderTemplate(
-			'public:if_toc_bb_code_tag_toc', [
-				'showTitle' => !$hideTitle,
-			]);
+			'public:if_toc_bb_code_tag_toc');
 	}
 
 	private static function resetCounters($depth = 0)
@@ -225,5 +221,31 @@ class TagRenderer
 		case 4:
 			self::$parNum = 0;
 		}
+	}
+
+	private static function resetCountersIfNeeded($entity,
+		\XF\BbCode\Renderer\AbstractRenderer $renderer)
+	{
+		$curId = self::getEntityId($entity);
+		$curContext = self::getCurrentContext($renderer);
+		$curSubContext = self::getCurrentSubContext($renderer);
+		if (self::$entityId !== $curId
+			|| self::$context !== $curContext
+			|| self::$subContext !== $curSubContext) {
+			self::$entityId = $curId;
+			self::$context = $curContext;
+			self::$subContext = $curSubContext;
+			self::resetCounters();
+		}
+	}
+
+	private static function getCurrentContext(\XF\BbCode\Renderer\AbstractRenderer $renderer)
+	{
+		return $renderer->getRules()->getContext();
+	}
+
+	private static function getCurrentSubContext(\XF\BbCode\Renderer\AbstractRenderer $renderer)
+	{
+		return $renderer->getRules()->getSubContext();
 	}
 }

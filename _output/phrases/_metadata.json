@@ -142,11 +142,5 @@
         "version_id": 1000070,
         "version_string": "1.0.0",
         "hash": "f61d6c3e3733db355168b7e1aee6780b"
-    },
-    "if_toc_table_of_contents.txt": {
-        "global_cache": false,
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "f61d6c3e3733db355168b7e1aee6780b"
     }
 }
