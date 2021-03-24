@@ -44,11 +44,13 @@ class TagRenderer
 	private static function getEntityId($entity)
 	{
 		if (!isset($entity)) {
-			\XF::logError('Can not get post/resource id: $entity is not defined.');
+			//\XF::logError('Can not get post/resource id: $entity is not defined.');
 			return 0;
 		}
 		if ($entity instanceof \XF\Entity\Post)
 			return $entity->post_id;
+		if ($entity instanceof \XF\Entity\ConversationMessage)
+			return $entity->message_id;
 		if (class_exists('\XFRM\Entity\ResourceUpdate')
 			&& $entity instanceof \XFRM\Entity\ResourceUpdate)
 			return $entity->resource_id;

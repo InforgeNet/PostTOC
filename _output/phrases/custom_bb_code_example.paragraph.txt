@@ -1,0 +1,2 @@
+[PARAGRAPH]My Paragraph[/PARAGRAPH]
+[PARAGRAPH=num]Numbered Paragraph[/PARAGRAPH]

@@ -1,7 +1,12 @@
 {
+    "public/if_toc_bb_code.less": {
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "3d5d645acb27da2715be8230c68b10f4"
+    },
     "public/if_toc_bb_code_tag_toc.html": {
         "version_id": 1000070,
         "version_string": "1.0.0",
-        "hash": "1293a7c624f8a134fdeabdc18e558210"
+        "hash": "c320b1afc0b3b3b31444a38ef650b74c"
     }
 }

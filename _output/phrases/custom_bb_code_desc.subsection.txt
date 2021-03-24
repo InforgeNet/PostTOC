@@ -1,1 +1,1 @@
-A Subsection.
+Defines a new subsection (3rd level section).

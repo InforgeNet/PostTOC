@@ -16,6 +16,8 @@ function getNameFromDepth(depth)
 	switch (depth) {
 	case 0:
 		return 'chapter';
+	case 1:
+		return 'section';
 	case 2:
 		return 'subsection';
 	case 3:
@@ -23,7 +25,7 @@ function getNameFromDepth(depth)
 	case 4:
 		return 'paragraph';
 	default:
-		return 'section';
+		return '';
 	}
 }
 
@@ -46,6 +48,7 @@ function fillTableOfContents(entries, idx, depth, toc)
 				title: 'Go to ' + getNameFromDepth(depth),
 				href: entry.anchor,
 			});
+			$(link).addClass('posttoc-' + getNameFromDepth(depth))
 			$(item).append(link);
 		}
 		$(toc).append(item);
@@ -72,7 +75,7 @@ function subtreeModifiedHandler()
 
 function initTocForEachPost()
 {
-	$('article.message').each(function() {
+	$('article.message, article.resourceBody-main, blockquote.message-body, div.bbCodeDemoBlock').each(function() {
 		createTocForPost(this);
 	});
 }

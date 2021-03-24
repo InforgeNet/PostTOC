@@ -1,1 +1,1 @@
-A chapter.
+Defines a new chapter (1st level section).

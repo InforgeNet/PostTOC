@@ -1,1 +1,1 @@
-A Paragraph.
+Defines a new paragraph (5th level section).

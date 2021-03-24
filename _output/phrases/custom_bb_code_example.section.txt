@@ -1,0 +1,2 @@
+[SECTION]My Section[/SECTION]
+[SECTION=nonum]Unnumbered Section[/SECTION]

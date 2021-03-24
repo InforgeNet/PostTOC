@@ -7,7 +7,7 @@
     "callback_class": "Inforge\\PostTOC\\BbCode\\TagRenderer",
     "callback_method": "renderChapterTag",
     "option_regex": "",
-    "trim_lines_after": 0,
+    "trim_lines_after": 1,
     "plain_children": true,
     "disable_smilies": false,
     "disable_nl2br": false,

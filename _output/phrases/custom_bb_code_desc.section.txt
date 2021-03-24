@@ -1,1 +1,1 @@
-A Section.
+Defines a new section (2nd level section).
