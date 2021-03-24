@@ -133,7 +133,9 @@ class TagRenderer
 		$anchorId = self::getAnchorId($uniqueId, $tagChildren);
 		if (strlen($num) > 0)
 			$num .= '&nbsp;&nbsp;&nbsp;&nbsp;';
-		return "<$tag class=\"$htmlClass\" id=\"$anchorId\">$num$content</$tag>";
+		return $renderer->wrapHtml(
+			"<$tag class=\"$htmlClass\" id=\"$anchorId\">",
+			"$num$content", "</$tag>");
 	}
 
 	private static function buildOptions($tagOption, $options = [])
