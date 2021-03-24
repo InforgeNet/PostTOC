@@ -14,7 +14,7 @@
     "disable_autolink": true,
     "allow_empty": false,
     "allow_signature": false,
-    "editor_icon_type": "",
-    "editor_icon_value": "",
+    "editor_icon_type": "fa",
+    "editor_icon_value": "fas fa-paragraph",
     "active": true
 }
