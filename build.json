@@ -4,5 +4,10 @@
 	],
 	"minify": [
 		"js/inforge/posttoc/toc-renderer.js"
+	],
+	"exec": [
+		"mv _build/upload/src/addons/Inforge/PostTOC/README.md _build/",
+		"mv _build/upload/src/addons/Inforge/PostTOC/CONTRIBUTING.md _build/",
+		"mv _build/upload/src/addons/Inforge/PostTOC/LICENSE _build/"
 	]
 }
